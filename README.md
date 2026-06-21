@@ -22,7 +22,6 @@ This repository contains my work and assignments completed as part of the Celeba
 ## Repository Structure
 
 ```text
-Week1/
 ├── week1_AmanNegi.ipynb
 ```
 
