@@ -77,6 +77,8 @@ The dataset contains information related to:
 Week2/
 │── week2_AmanNegi.ipynb
 │── tesla_deliveries_dataset_2015_2025.csv
+└── requirements.txt
 └── README.md
+
 ```
 
