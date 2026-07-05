@@ -110,5 +110,4 @@ Week3/
 │── Country-data.csv
 │── data-dictionary.csv
 │── README.md
-│── requirements.txt
 ```
