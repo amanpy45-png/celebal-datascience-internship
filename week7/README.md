@@ -106,7 +106,7 @@ week7/
 |
 ├── loader.py
 ├── app.py
-├── .env
+├── .env.example
 ├── requirements.txt
 │
 ├── data/
