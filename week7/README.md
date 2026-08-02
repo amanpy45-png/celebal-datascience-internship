@@ -1,6 +1,6 @@
-# 📚 Document Question Answering System using Retrieval-Augmented Generation (RAG)
+# Document Question Answering System using Retrieval-Augmented Generation (RAG)
 
-## 📌 Overview
+## Overview
 
 This project implements a **Retrieval-Augmented Generation (RAG)** system that answers user questions based on the content of uploaded PDF documents.
 
@@ -10,7 +10,7 @@ The application is built using **LangChain, FAISS, HuggingFace Embeddings, ChatG
 
 ---
 
-## 🎯 Objectives
+## Objectives
 
 - Build a Document Question Answering System using RAG.
 - Enable question answering over custom PDF documents.
@@ -20,20 +20,20 @@ The application is built using **LangChain, FAISS, HuggingFace Embeddings, ChatG
 
 ---
 
-## 🚀 Features
+## Features
 
-- 📄 Upload any PDF document
-- ✂️ Automatic text chunking
-- 🧠 Semantic embeddings using HuggingFace
-- 📦 FAISS vector database for efficient similarity search
-- 🔍 Retrieve the most relevant document chunks
-- 🤖 Generate context-aware answers using Llama 3.1 (Groq)
-- 📖 Display retrieved source passages with page numbers
-- 🌐 Interactive Streamlit web interface
+- Upload any PDF document
+- Automatic text chunking
+- Semantic embeddings using HuggingFace
+- FAISS vector database for efficient similarity search
+- Retrieve the most relevant document chunks
+- Generate context-aware answers using Llama 3.1 (Groq)
+- Display retrieved source passages with page numbers
+- Interactive Streamlit web interface
 
 ---
 
-## 🛠️ Technologies Used
+## Technologies Used
 
 - Python
 - Streamlit
@@ -46,7 +46,7 @@ The application is built using **LangChain, FAISS, HuggingFace Embeddings, ChatG
 
 ---
 
-## 🏗️ Project Architecture
+## Project Architecture
 
 ```
                 User Uploads PDF
@@ -84,7 +84,7 @@ The application is built using **LangChain, FAISS, HuggingFace Embeddings, ChatG
 
 ---
 
-## ⚙️ Workflow
+## Workflow
 
 1. Upload a PDF document.
 2. Extract text from the document.
@@ -98,17 +98,20 @@ The application is built using **LangChain, FAISS, HuggingFace Embeddings, ChatG
 
 ---
 
-## 📂 Project Structure
+## Project Structure
 
 ```
 week7/
 │
+|
+├── loader.py
 ├── app.py
 ├── .env
 ├── requirements.txt
 │
-├── temp/
-│
+├── data/
+│   ├── sample.pdf
+|
 └── utils/
     ├── loader.py
     ├── splitter.py
@@ -119,7 +122,7 @@ week7/
 
 ---
 
-## 📊 Components
+## Components
 
 ### Document Loader
 Loads PDF documents using `PyPDFLoader`.
@@ -141,7 +144,7 @@ Uses **Llama 3.1 8B Instant** through **Groq** to generate grounded answers.
 
 ---
 
-## 💡 Example
+## Example
 
 ### User Question
 
@@ -158,7 +161,7 @@ What is this document about?
 
 ---
 
-## 📚 Key Learnings
+## Key Learnings
 
 Through this project, I learned:
 
@@ -176,7 +179,7 @@ Through this project, I learned:
 
 ---
 
-## 🎯 Applications
+## Applications
 
 - Enterprise Knowledge Assistants
 - AI-powered Chatbots
@@ -189,7 +192,7 @@ Through this project, I learned:
 
 ---
 
-## 📈 Future Improvements
+## Future Improvements
 
 - Support multiple PDFs simultaneously
 - Conversation history
@@ -201,7 +204,7 @@ Through this project, I learned:
 
 ---
 
-## 📌 Conclusion
+## Conclusion
 
 This project demonstrates how Retrieval-Augmented Generation (RAG) combines document retrieval and large language models to answer questions from custom documents.
 
