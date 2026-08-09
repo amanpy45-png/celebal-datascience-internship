@@ -132,8 +132,7 @@ week8/
 ├── app.py
 ├── README.md
 ├── requirements.txt
-├── .env.example
-└── .gitignore
+
 ```
 
 The `.env` file is required for running the project locally but is not included in the repository for security reasons.
