@@ -1,30 +1,54 @@
-# CEI Data Science Internship 2026
+# Visual Product Recommender
 
-This repository documents my work, assignments, projects, and learning progress throughout the **Celebal Excellence Internship (CEI) 2026** at **Celebal Technologies**. It serves as a central repository for all practical implementations, weekly deliverables, and hands-on Data Science projects completed during the internship.
+An image-based product recommendation system that retrieves visually similar fashion products using deep learning and transfer learning.
 
-## Purpose
+The system accepts a product image, extracts deep visual features, and retrieves the most visually similar products from a fashion product dataset. It implements both a ResNet50 baseline and a Siamese Network trained with triplet loss for learning compact image embeddings.
 
-- Document my internship journey.
-- Organize weekly assignments and projects.
-- Showcase practical implementations of Data Science concepts.
-- Maintain a structured record of my learning and project work.
+---
 
-## Internship Details
+## Problem Statement
 
-- **Organization:** Celebal Technologies
-- **Program:** Celebal Excellence Internship (CEI)
-- **Domain:** Data Science
-- **Duration:** 15 June 2026 – 15 August 2026
+In e-commerce platforms, users may want to find products that look similar to an item they already have. Traditional keyword-based search cannot always capture visual characteristics such as color, shape, style, and design.
 
-## Repository Contents
+This project addresses this problem by building an image-based recommendation engine that retrieves visually similar fashion products using deep learning embeddings.
 
-- Weekly Assignments
-- Data Science Projects
-- Jupyter Notebooks
-- Project Documentation
-- Datasets (where applicable)
-- Requirements Files
+---
 
-## Note
+## Objectives
 
-This repository will be updated regularly throughout the internship as new assignments and projects are completed, reflecting my learning journey and practical experience in Data Science.
+- Accept a product image as input.
+- Extract meaningful visual features using a pretrained CNN.
+- Retrieve the Top-K visually similar products.
+- Implement a ResNet50-based baseline recommendation system.
+- Develop a Siamese Network using triplet loss.
+- Compare both approaches using Precision@5 and retrieval time.
+- Provide an interactive Streamlit interface for image-based search.
+
+---
+
+## System Architecture
+
+```text
+                 Input Product Image
+                         |
+                         v
+                 Image Preprocessing
+                         |
+                         v
+              +-----------------------+
+              |   Feature Extraction  |
+              +-----------------------+
+                   /             \
+                  /               \
+                 v                 v
+        ResNet50 Baseline    Siamese Network
+        2048-D Embedding     128-D Embedding
+                 |                 |
+                 v                 v
+              Cosine Similarity / Similarity Search
+                         |
+                         v
+                  Top-K Products
+                         |
+                         v
+                 Streamlit UI
