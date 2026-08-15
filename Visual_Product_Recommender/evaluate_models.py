@@ -14,10 +14,8 @@ SIAMESE_MODEL_PATH = "models/siamese_embedding.keras"
 K = 5
 NUM_QUERIES = 50
 
-
 def precision_at_k(retrieved_categories, query_category, k):
     retrieved = retrieved_categories[:k]
-
     if not retrieved:
         return 0.0
 
@@ -25,7 +23,6 @@ def precision_at_k(retrieved_categories, query_category, k):
         category == query_category
         for category in retrieved
     )
-
     return relevant / k
 
 
