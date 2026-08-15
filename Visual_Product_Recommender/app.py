@@ -20,12 +20,10 @@ SIAMESE_MODEL = "models/siamese_embedding.keras"
 
 IMAGE_SIZE = (224, 224)
 
-
 st.set_page_config(
     page_title="Visual Product Recommender",
     layout="wide"
 )
-
 st.title("Visual Product Recommendation System")
 
 st.write(
@@ -43,7 +41,6 @@ def load_baseline_data():
     metadata = pd.read_csv(
         METADATA_PATH
     )
-
     return embeddings, metadata
 
 
@@ -51,7 +48,6 @@ def load_baseline_data():
 def load_baseline_model():
 
     return FeatureExtractor()
-
 
 @st.cache_resource
 def load_siamese_model():
@@ -61,8 +57,6 @@ def load_siamese_model():
         compile=False,
         safe_mode=False
     )
-
-
 st.sidebar.header("Settings")
 
 model_choice = st.sidebar.selectbox(
@@ -73,7 +67,6 @@ model_choice = st.sidebar.selectbox(
     ],
     index=0
 )
-
 top_k = st.sidebar.slider(
     "Number of Recommendations",
     3,
@@ -85,7 +78,6 @@ uploaded_file = st.file_uploader(
     "Upload Product Image",
     type=["jpg", "jpeg", "png"]
 )
-
 
 if uploaded_file:
 
