@@ -16,24 +16,17 @@ TRIPLETS = 1000
 BATCH_SIZE = 16
 EPOCHS = 2
 
-
 def load_image(path):
     img = load_img(
         path,
         target_size=IMG_SIZE
     )
-
     img = img_to_array(img)
-
     return img
 
-
 def create_triplets(df, num_triplets):
-
     triplets = []
-
     categories = df["articleType"].unique()
-
     grouped = {
         category: group
         for category, group in df.groupby("articleType")
@@ -41,7 +34,6 @@ def create_triplets(df, num_triplets):
 
     for _ in range(num_triplets):
         category = random.choice(categories)
-
         category_df = grouped[category]
 
 
