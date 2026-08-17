@@ -44,7 +44,6 @@ def main():
     )
 
     print("\nTop 5 Similar Products:")
-    print("--------------------------------")
 
     for product_id, score in results:
 
